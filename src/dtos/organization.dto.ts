@@ -1,5 +1,7 @@
 import { IsNotEmpty, IsUUID } from 'class-validator';
-import { DeleteDto, FindAllDto, FindOneDto } from './';
+import { DeleteDto } from './delete.dto';
+import { FindAllDto } from './find-all.dto';
+import { FindOneDto } from './find-one.dto';
 
 export class OrganizationDto {
   @IsNotEmpty()
