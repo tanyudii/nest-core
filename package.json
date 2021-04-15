@@ -1,6 +1,6 @@
 {
   "name": "vnest-core",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "NestJS npm package starter",
   "author": "Yudi Hertanto <y.hertanto17@gmail.com>",
   "license": "MIT",
