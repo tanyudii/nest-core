@@ -48,5 +48,5 @@ export class FindAllDto {
 
   @IsOptional()
   @IsBoolean()
-  with_deleted?: string;
+  with_deleted?: boolean;
 }
