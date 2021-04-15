@@ -1,5 +1,4 @@
-import { FindOneQueryDto } from 'src/dtos';
-import { FindAllQueryDto } from '../dtos/find-all-query.dto';
+import { FindOneQueryDto } from '../dtos/find-one-query.dto';
 
 export const buildFindOnePayload = (query: FindOneQueryDto, params = {}) => {
   const {
