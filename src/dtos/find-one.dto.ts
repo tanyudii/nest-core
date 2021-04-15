@@ -19,5 +19,5 @@ export class FindOneDto {
 
   @IsOptional()
   @IsBoolean()
-  with_deleted?: boolean;
+  with_deleted?: string;
 }

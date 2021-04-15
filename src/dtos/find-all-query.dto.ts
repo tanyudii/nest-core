@@ -1,6 +1,15 @@
-import { IsBoolean, IsNumber, IsOptional, IsString } from 'class-validator';
+import { IsArray, IsBoolean, IsNumber, IsOptional, IsString, IsUUID } from 'class-validator';
 
 export class FindAllQueryDto {
+  @IsOptional()
+  @IsUUID('4')
+  id?: string;
+
+  @IsOptional()
+  @IsArray()
+  @IsUUID('4', { each: true })
+  ids?: string[];
+  
   @IsOptional()
   @IsString()
   search?: string;
@@ -31,5 +40,5 @@ export class FindAllQueryDto {
 
   @IsOptional()
   @IsString()
-  with_deleted?: number;
+  with_deleted?: string;
 }
