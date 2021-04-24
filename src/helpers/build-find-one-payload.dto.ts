@@ -7,10 +7,12 @@ export const buildFindOnePayload = (query: FindOneQueryDto, params = {}) => {
     with_deleted,
   } = query;
 
-  return Object.assign(params, {
+  Object.assign(params, {
     relations,
     using,
     with_deleted:
       with_deleted === undefined ? undefined : ['true', '1'].includes(with_deleted.toLowerCase()),
   });
+
+  return params;
 };

@@ -12,7 +12,7 @@ export const buildFindAllPayload = (query: FindAllQueryDto, params = {}) => {
     with_deleted,
   } = query;
 
-  return Object.assign(params, {
+  Object.assign(params, {
     search,
     relations,
     per_page: Number(per_page),
@@ -23,4 +23,6 @@ export const buildFindAllPayload = (query: FindAllQueryDto, params = {}) => {
     with_deleted:
       with_deleted === undefined ? undefined : with_deleted.toLowerCase() === 'true',
   });
+
+  return params;
 };
