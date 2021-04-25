@@ -21,7 +21,7 @@ export const buildFindAllPayload = (query: FindAllQueryDto, params = {}) => {
     sorted_by,
     using,
     with_deleted:
-      with_deleted === undefined ? undefined : with_deleted.toLowerCase() === 'true',
+      with_deleted === undefined ? undefined : ['true', '1'].includes(with_deleted.toLowerCase()),
   });
 
   return params;
