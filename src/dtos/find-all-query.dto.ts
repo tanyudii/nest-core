@@ -16,11 +16,11 @@ export class FindAllQueryDto {
 
   @IsOptional()
   @IsString()
-  page?: number;
+  page?: string;
 
   @IsOptional()
   @IsString()
-  per_page?: number;
+  per_page?: string;
 
   @IsOptional()
   @IsString()

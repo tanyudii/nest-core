@@ -12,11 +12,14 @@ export const buildFindAllPayload = (query: FindAllQueryDto, params = {}) => {
     with_deleted,
   } = query;
 
+  const perPageValue = parseInt(per_page);
+  const pageValue = parseInt(page);
+
   Object.assign(params, {
     search,
     relations,
-    per_page: Number(per_page),
-    page: Number(page),
+    per_page: isNaN(perPageValue) ? undefined : perPageValue,
+    page: isNaN(pageValue) ? undefined : pageValue,
     order_by,
     sorted_by,
     using,
